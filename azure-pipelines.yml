@@ -24,7 +24,7 @@ steps:
     git config user.email $GIT_EMAIL
     git config user.name $GIT_USER
     git remote rm origin
-    git remote add origin https://$GIT_USER:$GIT_TOKEN@github.com/CodersAKL/workspace-archive.git
+    git remote add origin https://$GIT_USER:$GH_TOKEN@github.com/CodersAKL/workspace-archive.git
     npm version patch
     git push --tags
 

@@ -1,4 +1,5 @@
 # Workspace-archive README
+[![Build Status](https://dev.azure.com/myfdisk/vscode extentions/_apis/build/status/CodersAKL.workspace-archive?branchName=master)](https://dev.azure.com/myfdisk/vscode extentions/_build/latest?definitionId=1&branchName=master)
 
 Super simple and fast workspace archiver.
 

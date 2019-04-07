@@ -27,5 +27,7 @@ steps:
   displayName: 'publish'
 
 - script: |
+    git config user.email "$GIT_EMAIL"
+    git config user.name "$GIT_USER"
     git push --tags
   displayName: 'release'

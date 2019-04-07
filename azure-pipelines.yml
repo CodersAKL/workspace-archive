@@ -15,6 +15,10 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- checkout: self
+  persistCredentials: true
+  clean: true
+
 - script: |
     npm install
     npm install -g vsce
@@ -27,7 +31,7 @@ steps:
   displayName: 'publish'
 
 - script: |
-    git config user.email "$GIT_EMAIL"
-    git config user.name "$GIT_USER"
+    git config --global user.email "$GIT_EMAIL"
+    git config --global user.name "$GIT_USER"
     git push --tags
   displayName: 'release'

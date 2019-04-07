@@ -21,8 +21,8 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    git config user.email "$GIT_EMAIL"
-    git config user.name "$GIT_USER"
+    git config user.email $GIT_EMAIL
+    git config user.name $GIT_USER
     npm version patch
     git remote add origin https://$GH_TOKEN@github.com/CodersAKL/workspace-archive.git
     git push --tags

@@ -2,7 +2,7 @@
   "name": "workspace-archive",
   "displayName": "workspace-archive",
   "description": "Archive your project to zip file",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "icon": "images/icon.png",
   "publisher": "Coders",
   "homepage": "https://github.com/CodersAKL/workspace-archive",

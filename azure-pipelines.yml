@@ -21,10 +21,6 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    npm test
-  displayName: 'Test'
-
-- script: |
     vsce package
     vsce publish -p $vscode
   displayName: 'publish'

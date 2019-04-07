@@ -26,7 +26,7 @@ steps:
     git remote rm origin
     git remote add origin https://$GIT_USER:$GH_TOKEN@github.com/CodersAKL/workspace-archive.git
     npm version patch
-    git push origin master --tags --force
+    git push origin HEAD:master --tags --force
   displayName: 'update version'
 
 - script: |

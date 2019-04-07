@@ -34,7 +34,7 @@ steps:
     echo "git config --global user.email $GIT_EMAIL"
     echo "git config --global user.name $GIT_USER"
 
-    git config --global user.email "$GIT_EMAIL"
-    git config --global user.name "$GIT_USER"
+    git config user.email "$GIT_EMAIL"
+    git config user.name "$GIT_USER"
     git push --tags
   displayName: 'release'

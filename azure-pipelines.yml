@@ -21,7 +21,11 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    echo "SUPER: $VS_CODE"
+    npm version patch
     vsce package
     vsce publish -p $VS_CODE
   displayName: 'publish'
+
+- script: |
+    git push --tags
+  displayName: 'release'

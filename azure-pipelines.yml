@@ -22,5 +22,5 @@ steps:
 
 - script: |
     vsce package
-    vsce publish -p $vscode
+    vsce publish -p $(vscode)
   displayName: 'publish'

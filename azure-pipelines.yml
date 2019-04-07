@@ -15,16 +15,6 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- task: InstallSSHKey@0
-  inputs:
-    hostName: 
-    sshPublicKey: $PUB_KEY
-    sshKeySecureFile: 
-
-- checkout: self
-  persistCredentials: true
-  clean: true
-
 - script: |
     npm install
     npm install -g vsce
@@ -32,10 +22,11 @@ steps:
 
 - script: |
     npm version patch
-    vsce package
-    vsce publish -p $VS_CODE
     git config user.email "$GIT_EMAIL"
     git config user.name "$GIT_USER"
     git remote add origin https://$GH_TOKEN@github.com/CodersAKL/workspace-archive.git > /dev/null 2>&1
     git push --tags
+
+    vsce package
+    vsce publish -p $VS_CODE
   displayName: 'publish'

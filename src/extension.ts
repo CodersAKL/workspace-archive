@@ -4,9 +4,6 @@ import * as AdmZip from "adm-zip";
 import * as path from "path";
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log(
-    'Congratulations, your extension "workspace-archive" is now active!'
-  );
 
   let disposable = vscode.commands.registerCommand(
     "extension.workspace.archive",

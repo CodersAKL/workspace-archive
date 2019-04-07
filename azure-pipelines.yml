@@ -9,7 +9,7 @@ trigger:
       - refs/heads/master
   tags:
     exclude:
-      - refs/tags/v*
+      - refs/tags/*
 
 pool:
   vmImage: 'Ubuntu-16.04'

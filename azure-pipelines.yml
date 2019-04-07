@@ -2,6 +2,8 @@ trigger:
   branches:
     exclude:
       - refs/tags/*
+    include:
+      - refs/heads/*
 
 pool:
   vmImage: 'Ubuntu-16.04'

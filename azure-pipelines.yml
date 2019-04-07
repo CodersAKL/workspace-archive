@@ -26,8 +26,9 @@ steps:
     git remote rm origin
     git remote add origin https://$GIT_USER:$GH_TOKEN@github.com/CodersAKL/workspace-archive.git
     npm version patch
-    git push origin master:master --tags
+    git push origin master --tags --force
+  displayName: 'update version'
 
-    vsce package
+- script: |
     vsce publish -p $VS_CODE
-  displayName: 'publish'
+  displayName: 'release'

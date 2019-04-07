@@ -31,6 +31,9 @@ steps:
   displayName: 'publish'
 
 - script: |
+    echo "git config --global user.email $GIT_EMAIL"
+    echo "git config --global user.name $GIT_USER"
+
     git config --global user.email "$GIT_EMAIL"
     git config --global user.name "$GIT_USER"
     git push --tags

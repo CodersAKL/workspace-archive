@@ -21,7 +21,7 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    echo $(vscode)
+    echo $vscode
     vsce package
-    vsce publish -p $(vscode)
+    vsce publish -p $vscode
   displayName: 'publish'

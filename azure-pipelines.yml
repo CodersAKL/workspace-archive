@@ -1,9 +1,7 @@
 trigger:
-  branches:
-    exclude:
-      - refs/tags/*
+  tags:
     include:
-      - refs/heads/*
+      - refs/tags/*
 
 pool:
   vmImage: 'Ubuntu-16.04'
@@ -18,15 +16,6 @@ steps:
     npm install
     npm install -g vsce
   displayName: 'npm install'
-
-- script: |
-    git config user.email $GIT_EMAIL
-    git config user.name $GIT_USER
-    git remote rm origin
-    git remote add origin https://$GIT_USER:$GH_TOKEN@github.com/CodersAKL/workspace-archive.git
-    npm version patch
-    git push origin HEAD:master --tags --force
-  displayName: 'update version'
 
 - script: |
     vsce publish -p $VS_CODE

@@ -19,5 +19,5 @@ steps:
   displayName: 'npm install'
 
 - script: |
-    vsce publish -p $VS_CODE
+    vsce publish -p $VS_CODE patch
   displayName: 'release'

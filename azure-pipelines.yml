@@ -4,19 +4,19 @@ trigger:
       - refs/tags/*
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: "Ubuntu-16.04"
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "10.x"
+    displayName: "Install Node.js"
 
-- script: |
-    npm install
-    npm install -g vsce
-  displayName: 'npm install'
+  - script: |
+      yarn
+      npm install -g vsce
+    displayName: "npm install"
 
-- script: |
-    vsce publish -p $VS_CODE
-  displayName: 'release'
+  - script: |
+      vsce publish -p $VS_CODE
+    displayName: "release"

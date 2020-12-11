@@ -31,7 +31,6 @@ export function activate(context: vscode.ExtensionContext) {
 			})
 			.catch((error) => {
 				msg.dispose();
-
 				vscode.window.showErrorMessage(error);
 			});
 	});
